@@ -1,0 +1,48 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint"],
+  "extends": ["plugin:jest/all"],
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 12,
+    "sourceType": "module"
+  },
+  // This loads <rootdir>/tsconfig.json to eslint (Fix import/no-unresolved eslint)
+  "settings": {
+    "import/resolver": {
+      "typescript": {}
+    }
+  },
+  // As using Airbnb code styles, we need to override specific rules
+  "rules": {
+    "@typescript-eslint/quotes": ["warn", "single"],
+    "jest/no-hooks": [
+      "error",
+      {
+        "allow": ["beforeEach", "afterAll"]
+      }
+    ],
+    "jest/prefer-expect-assertions": [
+      "warn",
+      {
+        "onlyFunctionsWithAsyncKeyword": true
+      }
+    ],
+    "jest/lowercase-name": [
+      "error",
+      {
+        "ignore": ["describe", "test"]
+      }
+    ],
+    "max-len": [
+      "error",
+      {
+        "code": 140,
+        "ignorePattern": "^import |^export \\{(.*?)\\}|class [a-zA-Z]+ implements ",
+        "ignoreComments": true
+      }
+    ]
+  }
+}

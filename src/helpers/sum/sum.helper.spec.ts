@@ -1,7 +1,7 @@
 import { sum } from './sum.helper';
 
 describe('Helpers - Sum', () => {
-  test.each([
+  it.each([
     [1, 2, 3],
     [40, 2, 42],
     [0, 0, 0],
@@ -11,3 +11,7 @@ describe('Helpers - Sum', () => {
     expect(sum(a, b)).toBe(expected);
   });
 });
+
+console.log(
+  'adzadzadza adzadzadza adzadzadza adzadzadza adzadzadza adzadzadza adzadzadza adzadzadza adzadzadza adzadzadza adzadzadza adzadzadza adzadzadza adzadzadza adzadzadza adzadzadza adzadzadza adzadzadza adzadzadza '
+);
