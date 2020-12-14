@@ -11,7 +11,3 @@ describe('Helpers - Sum', () => {
     expect(sum(a, b)).toBe(expected);
   });
 });
-
-console.log(
-  'adzadzadza adzadzadza adzadzadza adzadzadza adzadzadza adzadzadza adzadzadza adzadzadza adzadzadza adzadzadza adzadzadza adzadzadza adzadzadza adzadzadza adzadzadza adzadzadza adzadzadza adzadzadza adzadzadza '
-);
